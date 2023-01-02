@@ -15,7 +15,7 @@ Once pipenv is installed is time to install the required packages.
 
 1.2 Install the packages with the command
 
-    pipenv install
+    pipenv install  
 
 #### 2. Upload the .xlsx file to Google Sheets
 Upload the .xlsx file that is located in the folder *gsheet example* to your own Google Sheet
