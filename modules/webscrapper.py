@@ -25,9 +25,12 @@ async def webscrapper(on):
 
     """
 
-    logger.info("Starting the webscrapping...")
+    logger.info(f"Starting the webscrapping... of {on}")
 
-    async with aiohttp.ClientSession() as session:
+    # Create a timeout to avoid a TimeoutError
+    timeout = aiohttp.ClientTimeout(total=600)
+
+    async with aiohttp.ClientSession(timeout=timeout) as session:
         url = "https://www.allaria.com.ar/Bono/Especie/" + on
         async with session.get(url) as response:
             page = await response.text()
