@@ -30,6 +30,8 @@ async def main():
     # Update the values to gsheet
     update_gsheet_columns(df)
 
+    logger.info("Script finished!")
+
 
 # Set this if the code is run in Windows to avoid a loop error
 if platform.system() == "Windows":
