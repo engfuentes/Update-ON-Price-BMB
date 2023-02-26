@@ -12,6 +12,7 @@ oauth2client = "*"
 lxml = "*"
 cchardet = "*"
 aiohttp = "*"
+pyqt6 = "*"
 
 [dev-packages]
 

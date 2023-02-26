@@ -6,13 +6,9 @@ from modules.gsheet_operations import get_gsheet_as_df, update_gsheet_columns
 from modules.webscrapper import webscrapper
 
 # Enable logging
-logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO)
-logger = logging.getLogger(__name__)
+logger = logging.getLogger('app')
 
-logger.info("Starting the script...")
-
-
-async def main():
+async def routine():
     """Async main module.
     1. Gets the gsheet as a DataFrame
     2. Webscrap the prices of the ONs
@@ -37,4 +33,6 @@ async def main():
 if platform.system() == "Windows":
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
-asyncio.run(main())
+def main():
+    logger.info("Starting the script...")
+    asyncio.run(routine())

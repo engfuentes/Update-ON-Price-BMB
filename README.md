@@ -38,6 +38,6 @@ Every time that you restart the terminal you have to re-activate the virtual env
 
     pipenv shell
 
-Then you have to run the file **main.py** in the console:
+Then you have to run the file **app.py** in the console:
 
-    python main.py
+    python app.py

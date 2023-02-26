@@ -4,8 +4,7 @@ import pandas as pd
 import logging
 
 # Start logging
-logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO)
-logger = logging.getLogger(__name__)
+logger = logging.getLogger('app')
 
 
 def get_gsheet():
